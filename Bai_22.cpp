@@ -1,4 +1,4 @@
-//Bai 22: Tinh tong tat ca cac "uoc so" cua so nguyen duong n
+//Bai 22: Tinh tich tat ca cac "uoc so" cua so nguyen duong n
 #include <iostream>
 #include <math.h> 
 using namespace std;
