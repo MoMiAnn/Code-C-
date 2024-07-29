@@ -1,30 +1,22 @@
-//Bai 25: Liet ke tat ca cac "uoc so chanî cua so nguyen duong n
+//Bai 25: Tinh tong tat ca cac "uoc so chan‚Äù cua so nguyen duong n
 #include <iostream>
-#include <vector> 
+#include <vector>
 using namespace std;
 
-void ds_UocSo_Chan(vector<int> &ds, int n){
+int tong_UocSo_Chan(int n){
+	int tong = 0; 
 	for(int i=1; i<=n; i++){
-		if(n % i == 0 && i % 2 == 0){ //Dieu kien tim "uoc so chan" cua so nguyen duong n. 
-			ds.push_back(i);
+		if(n % i == 0 && i % 2 == 0){
+			tong += i; 
 		} 
 	} 
+	return tong; 
 } 
 
 int main(){
 	int n;
-	cout << "Nhap so nguyen n: "; cin >> n;
-	vector<int> ds; 
-	ds_UocSo_Chan(ds, n); 
-	if(ds.empty()){
-		cout << "Khong co so uoc so chan nao cua n ca!" << endl; 
-	}
-	else{
-		cout << "Cac \"uoc so chan\" cua so nguyen duong n:";
-		for(int uoc : ds){
-		    cout << " " << uoc; 
-	    } 
-	    cout << endl; 
-	} 
+	cout << "Nhap so nguyen n: ";
+	cin >> n; 
+	cout << "Tong tat ca cac \"uoc so chan\" cua so nguyen duong n: " << tong_UocSo_Chan(n) << endl; 
 	return 0; 	 
 } 
